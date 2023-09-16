@@ -42,7 +42,7 @@ input {
 img {
     width: inherit;
     height: inherit;
-    border-radius: 2%;
+    border-radius: 10px;
 }
 
 .elements {
@@ -50,6 +50,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 10px;
 }
 
 .string {
@@ -63,8 +64,8 @@ img {
 }
 
 .stringmemes {
-    color: white;
     font-size: 20px;
+    color: white;
 }
 
 .control {
@@ -99,7 +100,7 @@ img {
 #r2:checked~.elements>.control>label:nth-of-type(2) .button,
 #r3:checked~.elements>.control>label:nth-of-type(3) .button,
 #r4:checked~.elements>.control>label:nth-of-type(4) .button {
-    background: #cc5500;
+    background: rgb(255, 0, 0);
 }
 
 #r1:checked~.elements>.string .stringmemes {
@@ -147,7 +148,7 @@ img {
         width: 80vw;
     }
     .memslider {
-        height: 65vh;
+        height: 45vh;
     }
     .btn {
         padding: 0.5rem 0.2rem;
