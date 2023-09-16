@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh;
+    background-image: url(https://top-fon.com/uploads/posts/2023-02/1675565555_top-fon-com-p-goluboi-fon-dlya-prezentatsii-powerpoint-172.jpg);
+}
+
+.wrapper {
+    height: 80vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5vh;
+    overflow: hidden;
+    background: purple;
+    box-shadow: purple 0rem 0rem 0rem 0.4rem;
+    border-radius: 10px;
+}
+
+input {
+    display: none;
+}
+
+.memslider {
+    width: inherit;
+    height: 60vh;
+    display: flex;
+    background: purple;
+}
+
+.slide {
+    width: inherit;
+    height: inherit;
+}
+
+img {
+    width: inherit;
+    height: inherit;
+    border-radius: 10px;
+}
+
+.elements {
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.string {
+    display: flex;
+    display: inline-block;
+    height: 1.9rem;
+    width: auto;
+    overflow: hidden;
+    border: solid 0.15rem purple;
+    padding: 0 0.5rem 0 0.5rem;
+}
+
+.stringmemes {
+    font-size: 20px;
+    color: white;
+}
+
+.control {
+    display: flex;
+    justify-content: space-between;
+    width: 7rem;
+    padding: 0.3rem;
+}
+
+.btn {
+    padding: 1rem 0.2rem;
+    cursor: pointer;
+}
+
+.button {
+    width: 1rem;
+    height: 1rem;
+    border: solid 0.15rem yellow;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.btn:hover .button {
+    background: aquamarine;
+}
+
+.btn:active .button {
+    background: #1773a0;
+}
+
+#r1:checked~.elements>.control>label:nth-of-type(1) .button,
+#r2:checked~.elements>.control>label:nth-of-type(2) .button,
+#r3:checked~.elements>.control>label:nth-of-type(3) .button,
+#r4:checked~.elements>.control>label:nth-of-type(4) .button {
+    background: rgb(255, 0, 0);
+}
+
+#r1:checked~.elements>.string .stringmemes {
+    transform: translate(0, 0);
+    transition: all 0.5s linear;
+}
+
+#r2:checked~.elements>.string .stringmemes {
+    transform: translate(0, -100%);
+    transition: all 0.5s linear;
+}
+
+#r3:checked~.elements>.string .stringmemes {
+    transform: translate(0, -200%);
+    transition: all 0.5s linear;
+}
+
+#r4:checked~.elements>.string .stringmemes {
+    transform: translate(0, -300%);
+    transition: all 0.5s linear;
+}
+
+#r1:checked~.memslider>.slide {
+    transform: translate(0);
+    transition: all 0.8s linear;
+}
+
+#r2:checked~.memslider>.slide {
+    transform: translate(-100%);
+    transition: all 0.8s linear;
+}
+
+#r3:checked~.memslider>.slide {
+    transform: translate(-200%);
+    transition: all 0.8s linear;
+}
+
+#r4:checked~.memslider>.slide {
+    transform: translate(-300%);
+    transition: all 0.8s linear;
+}
+
+@media (max-width: 1070px) {
+    .wrapper {
+        width: 80vw;
+    }
+    .memslider {
+        height: 45vh;
+    }
+    .btn {
+        padding: 0.5rem 0.2rem;
+    }
+    .elements {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2.5vh;
+        height: inherit;
+        justify-content: start;
+    }
+    .string {
+        align-self: flex-start;
+        height: 10vh;
+        width: 40vw;
+    }
+    .stringmemes {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        word-spacing: 0.1rem;
+        height: 8rem;
+    }
+}
