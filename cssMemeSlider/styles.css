@@ -1,3 +1,70 @@
-html {
-    background-color: slateblue;
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh;
+    background: slateblue;
+}
+
+.wrapper {
+    height: 80vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5vh;
+    overflow: hidden;
+    background: purple;
+    box-shadow: purple 0rem 0rem 0rem 0.4rem;
+    border-radius: 10px;
+}
+
+input {
+    display: none;
+}
+
+.memslider {
+    width: inherit;
+    height: 60vh;
+    display: flex;
+    background: purple;
+}
+
+.slide {
+    width: inherit;
+    height: inherit;
+}
+
+img {
+    width: inherit;
+    height: inherit;
+    border-radius: 2%;
+}
+
+.elements {
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(77, 86, 77);
+    border-radius: 5px;
+}
+
+.string {
+    display: flex;
+    display: inline-block;
+    height: 1.9rem;
+    width: auto;
+    overflow: hidden;
+    border: solid 0.15rem rgb(255, 104, 0);
+    padding: 0 0.5rem 0 0.5rem;
+}
+
+.stringmemes {
+    color: white;
+    font-size: 20px;
 }
